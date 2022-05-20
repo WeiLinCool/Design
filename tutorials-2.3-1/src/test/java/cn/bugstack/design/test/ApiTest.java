@@ -34,6 +34,7 @@ public class ApiTest {
         creditCard.withdrawal("100001", new BigDecimal(1000000));
         // 储蓄
         creditCard.recharge("100001", new BigDecimal(100));
+        creditCard.checkRisk("100001","2022-03-05", new BigDecimal(10000));
     }
 
     @Test
