@@ -9,8 +9,14 @@ package cn.bugstack.design;
  */
 public interface IVideoUserService {
 
+    /**
+     * 定义
+     */
     void definition();
 
+    /**
+     * 广告
+     */
     void advertisement();
 
 }

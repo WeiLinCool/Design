@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 /**
- * @description: 模拟信用卡功能
+ * @description: 模拟信用卡功能，通过继承实现储蓄卡实现储蓄卡相应功能
  * @author: 小傅哥，微信：fustack
  * @date: 2022/3/5
  * @github: https://github.com/fuzhengwei/CodeDesignTutorials
@@ -17,6 +17,12 @@ public class CreditCard extends CashCard {
 
     private Logger logger = LoggerFactory.getLogger(CashCard.class);
 
+    /**
+     * 贷款
+     * @param orderId 单号
+     * @param amount  金额
+     * @return
+     */
     @Override
     public String withdrawal(String orderId, BigDecimal amount) {
         // 校验
@@ -31,6 +37,12 @@ public class CreditCard extends CashCard {
         return "0000";
     }
 
+    /**
+     * 还款
+     * @param orderId 单号
+     * @param amount  金额
+     * @return
+     */
     @Override
     public String recharge(String orderId, BigDecimal amount) {
         // 模拟生成还款单
@@ -40,6 +52,10 @@ public class CreditCard extends CashCard {
         return "0000";
     }
 
+    /**
+     * 流水号查询
+     * @return
+     */
     @Override
     public List<String> tradeFlow() {
         return super.tradeFlow();
